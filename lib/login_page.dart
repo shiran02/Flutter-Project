@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
     if (_usernameController.text == "shiran" &&
         _passwordController.text == "1234") {
       print("Login success");
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(username:_usernameController.text)));
     } else {
       print("Login faild");
       showAlertDialog(context);
