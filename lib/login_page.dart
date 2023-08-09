@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:login/home_page.dart';
+import 'package:login/home_pagetwo.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -115,7 +116,8 @@ class _LoginPageState extends State<LoginPage> {
     if (_usernameController.text == "shiran" &&
         _passwordController.text == "1234") {
       print("Login success");
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(username:_usernameController.text)));
+   //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage(username:_usernameController.text)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePageTwo()));
     } else {
       print("Login faild");
       showAlertDialog(context);
